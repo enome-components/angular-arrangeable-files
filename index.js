@@ -6,6 +6,16 @@ mod.directive('arrangeableFiles', function () {
     restrict: 'E',
     scope: { selected: '=', fileserver: '=' },
     template: require('./template'),
+    link: function (scope) {
+      scope.$watch('full_screen', function (v) {
+        if (v) {
+          window.document.body.style.overflow = 'hidden';
+          return;
+        }
+
+        window.document.body.style.overflow = 'inherit';
+      });
+    },
     controller: function ($scope) { $scope.full_screen = false; }
   };
 
