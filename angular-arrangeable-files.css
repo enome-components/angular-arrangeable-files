@@ -1,9 +1,9 @@
-.arrangeable-files .default header {
+.arrangeable-files .default .header {
   background: #F2FAFA; 
   margin-bottom: 4px;
 }
 
-.arrangeable-files .default header button {
+.arrangeable-files .default .header button {
   font-size: 12px;
   text-transform: uppercase;
   background: #6ed2dd;
