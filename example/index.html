@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel='stylesheet' href='build/build.css'>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js'></script>
+    <script src='build/build.js'></script>
+
+    <script>
+      var mod = window.angular.module('my-app', [ require('angular-arrangeable-files') ]);
+      mod.controller('Ctrl', function ($scope) {
+        $scope.files = ['one.jpg', 'two.jpg'];
+
+        $scope.$watch('files.length', function () {
+          console.log($scope.files);
+        });
+      });
+    </script>
+
+    <style>
+      .container {
+        padding: 4em;
+      }
+    </style>
+
+  </head>
+
+  <body ng-app='my-app' ng-controller='Ctrl'>
+    <div class='container'>
+      <arrangeable-files selected='files' fileserver='"/fileserver"'></arrangeable-files>
+    </div>
+  </body>
+
+</html>

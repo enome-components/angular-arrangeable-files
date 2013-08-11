@@ -1,0 +1,16 @@
+<div class='arrangeable-files'>
+
+  <div class='default' ng-show='!full_screen'>
+    <header>
+      <button ng-click='full_screen = !full_screen'>Select files</button>
+    </header>
+
+    <arrangeable-array array='selected'></arrangeable-array>
+  </div>
+
+  <div class='overlay' ng-show='full_screen'>
+    <file-manager selected='selected' url='fileserver'></file-manager>
+    <button ng-click='full_screen = !full_screen'>Close</button>
+  </div>
+
+</div>
