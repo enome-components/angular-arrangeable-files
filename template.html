@@ -2,7 +2,7 @@
 
   <div class='default' ng-show='!full_screen'>
     <div class='header'>
-      <button ng-click='full_screen = !full_screen'>Select files</button>
+      <button type='button' ng-click='full_screen = !full_screen'>Select files</button>
     </div>
 
     <arrangeable-array array='selected'></arrangeable-array>
@@ -10,7 +10,7 @@
 
   <div class='overlay' ng-show='full_screen'>
     <file-manager selected='selected' url='fileserver'></file-manager>
-    <button ng-click='full_screen = !full_screen'>Close</button>
+    <button type='button' ng-click='full_screen = !full_screen'>Close</button>
   </div>
 
 </div>
