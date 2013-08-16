@@ -1,5 +1,10 @@
+.arrangeable-files {
+  padding: 10px 10px 0;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 10px;
+}
+
 .arrangeable-files .default .header {
-  background: #F2FAFA; 
   margin-bottom: 4px;
 }
 
